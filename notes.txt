@@ -30,3 +30,15 @@ Added strikethrough text (text-decoration: line-through)
 Made "perfume" all caps (text-transform: uppercase)
 Got the two prices center-aligned vertically (with flexbox)
 
+Added the shopping cart icon. Started with trying to use font-awesome but the icon I needed was behind a paywall -> used the provided icon by embedding svg into html. Removed the "fill" attrubite from the svg element, and instead added its fill property in CSS.
+
+Changed article from display:flex to display: grid so that I can control the width of the two halves on desktop and have them each take up 50% of container width. (Could have also done this with article > div {width: 50%})
+
+Roadblock: border-radius wasn't showing up on outer corners of image. Asked search engine -> got this page which fixed the issue (container {overflow:hidden}). 
+https://floriankempenich.com/background-image-with-rounded-corners
+
+Moved the card further down the page using transform:translateY. Used a media query to move it down by a smaller amount on phones.
+
+Incorporated media queries for tablets and cleaned up media queries for desktop, with mobile-like rules for narrow desktop windows.
+
+Noticed the cart image I'd used (the one provided) was facing the opposite way from the one in the design file. Tried applying transform:scaleX(-1) to the svg and to its container; didn't work. Then I noticed that the file was different than what's shown in the design file: the handle is on the wrong side. Re-exported the svg from Figma (selected the image -> in the right-side panel, clicked on the plus sign next to "Export" -> saved file). Fixed.
