@@ -23,4 +23,10 @@ Tried background-image but had problem getting the div to have height. Tried add
 Added padding around the text half of the card
 Removed margins from all h1 and p elements
 Added display:flex to the container for the text half of the card
+Added other flex containers and gaps for spacing as specified
+
+Added font colors
+Added strikethrough text (text-decoration: line-through)
+Made "perfume" all caps (text-transform: uppercase)
+Got the two prices center-aligned vertically (with flexbox)
 

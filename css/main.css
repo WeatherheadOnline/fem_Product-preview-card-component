@@ -21,6 +21,7 @@ html, body {margin: 0; padding: 0;}
 html {font-size: 10px;}
 body {
     background-color: var(--cream);
+    color: var(--grey);
 }
 
 article {
@@ -55,6 +56,14 @@ h1, p {
     margin: 0;
 }
 
+.product-title {
+    color: var(--black);
+}
+
+.product-category {
+    text-transform: uppercase;
+}
+
 .product-description {
     padding: var(--spacing-400-32);
     display: flex;
@@ -79,6 +88,27 @@ h1, p {
 .reverse-flex-container {flex-direction: column-reverse;}
 
 
+.product-current-price {color: var(--green-500);}
+.product-price-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--spacing-200-16);
+}
+
+button {
+    background-color: var(--green-500);
+    color: var(--white);
+    height: 5rem;
+    border-radius: 1rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+button svg {fill: var(--white);}
+
 .text-preset-1 {
     font-family: "Fraunces", serif;
     font-size: 3.2rem;
@@ -87,9 +117,6 @@ h1, p {
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 700;
-    /* font-variation-settings:
-    "SOFT" 0,
-    "WONK" 0; */
 }
 
 .text-preset-2 {
@@ -130,7 +157,7 @@ h1, p {
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 500;
-    /* ** Strikethrough ** */
+    text-decoration: line-through;
 }
 
 
