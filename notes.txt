@@ -3,19 +3,17 @@ Pulled specifics from style-guide.md: colors, typography.
 Added the colors from style-guide.md to the CSS as variables
 
 Made text-preset classes in CSS, based on typography in figma file's design system
-- font weights were listed in the design system as "bold" or "medium" instead of by number as in the font file -> used the weights in the figma file's designs.
-- NOPE: style-guide.md specifies weights of 500 & 700
 
 Added the spacings from the design file to CSS as variables
 
 Added HTML: 
 - divided into main for product card vs footer for attribution
-- main -> article as main container for product card
+- main -> article as container for product card
 - within article: two divs, one to contain image, the other for text content, to facilitate changing their flex-direction between column and row for mobile and desktop.
 
 Before creating any more structure: look at design file to see where the spacing is consistent -> what containers should be at same level in hierarchy. Design file showed consistent spacing: between the three text elements, so those go in a container together; between the text, price, and button elements, so those go in a container together.
 
-Nested the product description ("perfume") and the product title, so that I could: put them in reverse order in the HTML, to allow for proper use of h1 tag, for screen readers; then use "flex-direction: column-reverse" to make them appear on the screen in the right order.
+Nested the product description ("perfume") and the product title in their own container, so that I could: put them in reverse order in the HTML, to allow for proper use of h1 tag, for screen readers; then use "flex-direction: column-reverse" to make them appear on the screen in the right order.
 
 Image:
 Tried background-image but had problem getting the div to have height. Tried adding an <img> element but would need to use JS to switch out the "src" attribute for desktop/tablet -> Back to background-image, use aspect-ratio to control height. Might be difficult to set desktop sizing this way. Circle back around.
@@ -32,7 +30,7 @@ Got the two prices center-aligned vertically (with flexbox)
 
 Added the shopping cart icon. Started with trying to use font-awesome but the icon I needed was behind a paywall -> used the provided icon by embedding svg into html. Removed the "fill" attrubite from the svg element, and instead added its fill property in CSS.
 
-Changed article from display:flex to display: grid so that I can control the width of the two halves on desktop and have them each take up 50% of container width. (Could have also done this with article > div {width: 50%})
+Changed article from display:flex to display: grid so that I can control the width of the two halves on desktop and have them each take up 50% of container width. (Could possibly have also done this with article > div {width: 50%})
 
 Roadblock: border-radius wasn't showing up on outer corners of image. Asked search engine -> got this page which fixed the issue (container {overflow:hidden}). 
 https://floriankempenich.com/background-image-with-rounded-corners
